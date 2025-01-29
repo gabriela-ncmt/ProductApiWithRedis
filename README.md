@@ -26,7 +26,7 @@ Clone este repositório para sua máquina local:
 
 ``` bash
 
-git clone https://github.com/seu-usuario/produto-api.git
+https://github.com/gabriela-ncmt/ProductApiWithRedis.git
 ```
 2. Configuração do Redis
 Certifique-se de que o Redis esteja em funcionamento. Se for local, o Redis geralmente está disponível no endereço localhost:6379 por padrão.
