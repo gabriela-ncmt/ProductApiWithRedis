@@ -1,0 +1,6 @@
+@ProductApiWithRedis_HostAddress = http://localhost:5109
+
+GET {{ProductApiWithRedis_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
