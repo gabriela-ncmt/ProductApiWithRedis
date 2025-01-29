@@ -48,7 +48,7 @@ namespace ProductApiWithRedis.Controllers
         {
             var cacheKey = $"product_{id}";
             var cachedProduct = await _cacheService.GetCacheAsync<Product>(cacheKey);
-            if (cachedProduct == null)
+            if (cachedProduct != null)
                 return Ok(cachedProduct);
 
             var product = await _context.Products.FindAsync(id);
