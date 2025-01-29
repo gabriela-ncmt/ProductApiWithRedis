@@ -3,24 +3,24 @@
 ## API de Produtos - .NET Core com Redis e Banco de Dados em Memória
 Esta aplicação API RESTful foi construída com .NET Core e implementa operações CRUD (Criar, Ler, Atualizar e Deletar) para gerenciamento de produtos. Para otimizar as consultas de leitura, foi integrado o uso de Redis para as operações GET de busca de produtos. A aplicação utiliza um banco de dados em memória para armazenar os produtos durante a execução.
 
-## Tecnologias Utilizadas
+### Tecnologias Utilizadas
 - .NET Core 8
 - Redis
 - Entity Framework Core (InMemory Database)
 - ASP.NET Core Web API
 
-## Funcionalidades
+### Funcionalidades
 - GET /products - Retorna todos os produtos.
 - GET /products/{id} - Retorna um produto específico pelo ID.
 - POST /products - Cria um novo produto.
 - PUT /products/{id} - Atualiza um produto existente.
 - DELETE /products/{id} - Deleta um produto.
   
-## Pré-requisitos
+### Pré-requisitos
 - .NET SDK: Você precisará do SDK do .NET Core instalado.
 - Redis: Certifique-se de ter o Redis em execução na sua máquina ou em um servidor acessível. Se não tiver o Redis instalado, pode usá-lo via Docker ou em um serviço de nuvem como o Redis Labs.
 
-## Instalação
+### Instalação
 1. Clonando o Repositório
 Clone este repositório para sua máquina local:
 
@@ -60,7 +60,7 @@ dotnet run
 ```
 Isso irá iniciar a API no endereço http://localhost:7020.
 
-## Endpoints
+### Endpoints
 1. GET /products: 
 Recupera todos os produtos armazenados no banco de dados em memória. Caso um produto tenha sido consultado recentemente, a resposta será retornada do Redis (se disponível).
 
@@ -77,7 +77,7 @@ Atualiza um produto existente pelo ID.
 Deleta um produto existente pelo ID.
 
 
-## Arquitetura e Fluxo de Dados
+### Arquitetura e Fluxo de Dados
 GET /products: O endpoint verifica primeiro se os dados estão armazenados no Redis. Caso contrário, ele consulta o banco de dados em memória e armazena os resultados no Redis para otimizar futuras consultas.
 
 GET /products/{id}: O produto é consultado no Redis. Caso não esteja presente, o sistema faz uma consulta no banco de dados em memória e o armazena no Redis para otimização.
