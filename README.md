@@ -4,7 +4,7 @@
 Esta aplicação API RESTful foi construída com .NET Core e implementa operações CRUD (Criar, Ler, Atualizar e Deletar) para gerenciamento de produtos. Para otimizar as consultas de leitura, foi integrado o uso de Redis para as operações GET de busca de produtos. A aplicação utiliza um banco de dados em memória para armazenar os produtos durante a execução.
 
 ### Tecnologias Utilizadas
-- .NET Core 8
+- .NET Core 6
 - Redis
 - Entity Framework Core (InMemory Database)
 - ASP.NET Core Web API
